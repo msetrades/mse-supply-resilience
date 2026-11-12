@@ -43,6 +43,20 @@ type Tab = "overview" | "network" | "scenarios" | "suppliers" | "components";
 
 const db = createClient();
 
+function BrandMark() {
+  return (
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="m6 10 10-6 10 6v12l-10 6-10-6V10Z" />
+      <path d="m6.5 10 9.5 6 9.5-6M16 16v11" />
+      <circle cx="6" cy="10" r="2.5" />
+      <circle cx="26" cy="10" r="2.5" />
+      <circle className="mark-core" cx="16" cy="16" r="2.5" />
+      <circle cx="6" cy="22" r="2.5" />
+      <circle cx="26" cy="22" r="2.5" />
+    </svg>
+  );
+}
+
 function Field({ label, children }: { label: string; children: ReactNode }) {
   return (
     <label className="field">
@@ -611,7 +625,10 @@ export default function Home() {
         <section className="auth-story">
           <span className="eyebrow">MSE / SUPPLY CHAIN RESILIENCE</span>
           <div className="brand">
-            ◈ <span>SupplyMesh</span>
+            <span className="brand-mark">
+              <BrandMark />
+            </span>
+            <span>SupplyMesh</span>
           </div>
           <h1>
             See the weak links
@@ -768,7 +785,9 @@ export default function Home() {
     <main className="app-shell">
       <aside className="sidebar">
         <a className="brand" href="#">
-          <span className="brand-mark">◈</span>
+          <span className="brand-mark">
+            <BrandMark />
+          </span>
           <span>
             SupplyMesh<small>NETWORK INTELLIGENCE</small>
           </span>

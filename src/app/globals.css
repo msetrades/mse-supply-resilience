@@ -93,6 +93,23 @@ a {
   color: var(--lime);
   font-size: 20px;
 }
+.brand-mark svg {
+  width: 23px;
+  height: 23px;
+  overflow: visible;
+  fill: #c5e58b;
+  stroke: #7ec7b4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.3;
+}
+.brand-mark svg path {
+  fill: none;
+}
+.brand-mark svg .mark-core {
+  fill: #e7a064;
+  stroke: #e7a064;
+}
 .button {
   display: inline-flex;
   min-height: 42px;
